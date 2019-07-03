@@ -49,7 +49,7 @@ export default class SoundPlayer {
   }) {
     const player = this.instruments[instrument];
     const gainNode = context.createGain();
-    gainNode.gain.setValueAtTime(0.1, timing);
+    gainNode.gain.setValueAtTime(0.5, timing);
     gainNode.connect(context.destination);
 
     if (player) player.play({context, timing, destination: gainNode});
